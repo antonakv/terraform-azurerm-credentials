@@ -43,23 +43,19 @@ Resolving deltas: 100% (1/1), done.
 
 - Login to https://portal.azure.com/ with your credentials
 
-Sample result
-![Azure login](https://github.com/antonakv/azurerm-credentials-setup/raw/main/images/image1.png)
-
 - Click ```Azure Active Directory```
 
-Sample result
-![Azure active directory](https://github.com/antonakv/azurerm-credentials-setup/raw/main/images/image2.png)
+![Azure login](https://github.com/antonakv/azurerm-credentials-setup/raw/main/images/image1.png)
 
 - Select ```App registrations```
 
 Sample result
-![App registrations](https://github.com/antonakv/azurerm-credentials-setup/raw/main/images/image3.png)
+![Azure active directory](https://github.com/antonakv/azurerm-credentials-setup/raw/main/images/image2.png)
 
 - Click ```New registration```
 
 Sample result
-![New registration](https://github.com/antonakv/azurerm-credentials-setup/raw/main/images/image4.png)
+![App registrations](https://github.com/antonakv/azurerm-credentials-setup/raw/main/images/image3.png)
 
 - Enter application name and add it to your notes. It will be required later.
 
