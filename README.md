@@ -1,4 +1,4 @@
-# Azurerm terraform plugin credentials setup
+# Terraform Azurerm provider credentials 
 
 ## Intro
 
