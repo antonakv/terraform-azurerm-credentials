@@ -119,3 +119,11 @@ Sample result
 
 You will see notification that Save was successful 
 
+- Click ```Home - Azure Active Directory```
+
+![Azure login](https://github.com/antonakv/azurerm-credentials-setup/raw/main/images/image1.png)
+
+- Select ```App registrations```
+
+![Azure active directory](https://github.com/antonakv/azurerm-credentials-setup/raw/main/images/image2.png)
+
