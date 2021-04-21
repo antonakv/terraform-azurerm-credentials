@@ -127,3 +127,34 @@ You will see notification that Save was successful
 
 ![Azure active directory](https://github.com/antonakv/azurerm-credentials-setup/raw/main/images/image2.png)
 
+- Click ```Owned applications``` and click on app name you created before
+
+![Owned applications](https://github.com/antonakv/azurerm-credentials-setup/raw/main/images/image13.png)
+
+- Click ```Certificates and secrets``` 
+
+![Certificates and secrets](https://github.com/antonakv/azurerm-credentials-setup/raw/main/images/image14.png)
+
+- Click ```New client secret``` 
+
+![New secret](https://github.com/antonakv/azurerm-credentials-setup/raw/main/images/image15.png)
+
+- Click ```Add```
+
+![Add secret](https://github.com/antonakv/azurerm-credentials-setup/raw/main/images/image16.png)
+
+- Copy created secret value and add it to the end of your local  ~/.zshrc file in a following format, 
+so value is enclosed with double quotes.
+
+![Add secret](https://github.com/antonakv/azurerm-credentials-setup/raw/main/images/image17.png)
+
+Example
+```bash 
+export ARM_CLIENT_SECRET="aaaaaaaa-bbbb-cccc-9999-aaaaaaaaaaaa"
+```
+
+- Reload your ~/.zshrc file
+
+```bash
+source ~/.zshrc
+```
