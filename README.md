@@ -71,6 +71,15 @@ Example
 export ARM_CLIENT_ID="aaaaaaaa-bbbb-cccc-9999-aaaaaaaaaaaa"
 ```
 
+- Copy ```Application (tenant) ID``` value and add it to the end of your local  ~/.zshrc file in a following format, 
+so value is enclosed with double quotes.
+
+Example
+```bash 
+export ARM_TENANT_ID="aaaaaaaa-bbbb-cccc-9999-aaaaaaaaaaaa"
+```
+
+
 - Click Home -> Subscriptions and then click on your team subscription
 
 ![Subscription](https://github.com/antonakv/azurerm-credentials-setup/raw/main/images/image7.png)
@@ -107,5 +116,6 @@ Sample result
 ![Select app](https://github.com/antonakv/azurerm-credentials-setup/raw/main/images/image12.png)
 
 - Click Save
+
 You will see notification that Save was successful 
 
