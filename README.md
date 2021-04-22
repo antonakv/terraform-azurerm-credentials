@@ -24,13 +24,13 @@ Ask helpdesk@ to provide access
 - Clone git repository. 
 
 ```bash
-git clone https://github.com/antonakv/azurerm-credentials-setup
+git clone https://github.com/antonakv/terraform-azurerm-credentials
 ```
 
 Expected command output looks like this:
 
 ```bash
-Cloning into 'azurerm-credentials-setup'...
+Cloning into 'terraform-azurerm-credentials'...
 remote: Enumerating objects: 12, done.
 remote: Counting objects: 100% (12/12), done.
 remote: Compressing objects: 100% (12/12), done.
@@ -157,4 +157,120 @@ export ARM_CLIENT_SECRET="aaaaaaaa-bbbb-cccc-9999-aaaaaaaaaaaa"
 
 ```bash
 source ~/.zshrc
+```
+
+- In terminal app open folder created in the preparation stage
+
+```bash
+cd terraform-azurerm-credentials
+```
+
+Sample result
+
+```bash
+$ cd terraform-azurerm-credentials
+$
+```
+
+- Initialize terraform providers
+```bash
+terraform init
+```
+
+Sample result
+```bash
+$ terraform init
+
+Initializing the backend...
+
+Initializing provider plugins...
+- Finding hashicorp/azurerm versions matching "2.55.0"...
+- Installing hashicorp/azurerm v2.55.0...
+- Installed hashicorp/azurerm v2.55.0 (signed by HashiCorp)
+
+Terraform has created a lock file .terraform.lock.hcl to record the provider
+selections it made above. Include this file in your version control repository
+so that Terraform can guarantee to make the same selections by default when
+you run "terraform init" in the future.
+
+Terraform has been successfully initialized!
+
+You may now begin working with Terraform. Try running "terraform plan" to see
+any changes that are required for your infrastructure. All Terraform commands
+should now work.
+
+If you ever set or change modules or backend configuration for Terraform,
+rerun this command to reinitialize your working directory. If you forget, other
+commands will detect it and remind you to do so if necessary.
+```
+
+- Run terraform plan
+
+```bash 
+terraform plan
+```
+
+Sample result
+```bash
+$ terraform plan
+
+An execution plan has been generated and is shown below.
+Resource actions are indicated with the following symbols:
+  + create
+
+Terraform will perform the following actions:
+
+  # azurerm_resource_group.example will be created
+  + resource "azurerm_resource_group" "example" {
+      + id       = (known after apply)
+      + location = "westeurope"
+      + name     = "aakulov-example"
+    }
+
+Plan: 1 to add, 0 to change, 0 to destroy.
+
+------------------------------------------------------------------------
+
+Note: You didn't specify an "-out" parameter to save this plan, so Terraform
+can't guarantee that exactly these actions will be performed if
+"terraform apply" is subsequently run.
+
+```
+
+- Run terraform apply
+
+```bash
+terraform apply
+```
+
+Sample result
+
+```bash
+$ terraform apply
+
+An execution plan has been generated and is shown below.
+Resource actions are indicated with the following symbols:
+  + create
+
+Terraform will perform the following actions:
+
+  # azurerm_resource_group.example will be created
+  + resource "azurerm_resource_group" "example" {
+      + id       = (known after apply)
+      + location = "westeurope"
+      + name     = "aakulov-example"
+    }
+
+Plan: 1 to add, 0 to change, 0 to destroy.
+
+Do you want to perform these actions?
+  Terraform will perform the actions described above.
+  Only 'yes' will be accepted to approve.
+
+  Enter a value: yes
+
+azurerm_resource_group.example: Creating...
+azurerm_resource_group.example: Creation complete after 2s [id=/subscriptions/9f9b362c-0ced-42f9-8327-987494fd7c26/resourceGroups/aakulov-example]
+
+Apply complete! Resources: 1 added, 0 changed, 0 destroyed.
 ```
