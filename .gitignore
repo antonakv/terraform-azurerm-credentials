@@ -16,6 +16,7 @@ vendor/
 *.srl
 
 .terraform
+.terraform*
 *.tfstate*
 
 Gemfile.lock
